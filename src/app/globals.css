@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --primary: #3a86ff;
+  --primary-hover: #2563eb;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --font-sans: var(--font-vazirmatn), system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-vazirmatn), system-ui, -apple-system, sans-serif;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* رفع استایل‌های حاشیه پیش‌فرض نقشه Leaflet برای ظاهر تمیز و فلت */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  background-color: #f8fafc;
+  font-family: inherit !important;
+  outline: none !important;
+}
+
+/* تلطیف ملایم رنگ‌های نقشه برای جلوه مدرن و مینیمال مشابه اسنپ/اوبر */
+.leaflet-tile-pane {
+  filter: saturate(0.88) contrast(1.02);
+}
+
+.leaflet-control-container .leaflet-routing-container {
+  display: none !important;
+}
+
+.custom-map-marker {
+  background: transparent;
+  border: none;
+}
